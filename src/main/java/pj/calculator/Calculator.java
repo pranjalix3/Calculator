@@ -148,7 +148,9 @@ public class Calculator {
                         }
                     }
                     else if(Objects.equals(buttonVal, "√")){
-                        //to-do
+                        double numDisplay = Double.parseDouble(displayLabel.getText());
+                        numDisplay = Math.sqrt(numDisplay);
+                        displayLabel.setText(removeZeroDecimal(numDisplay));
                     }
                     else{
                         if(Objects.equals(displayLabel.getText(), "0")){
